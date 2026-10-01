@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-autosuggestions
+  # zsh-autosuggestions
 )
 
 # source $ZSH/oh-my-zsh.sh
@@ -169,6 +169,9 @@ alias makocls="makoctl dismiss -a"
 
 # nixos rebuild switch
 alias rebsw="sudo nixos-rebuild switch"
+
+# nixos rebuild list generation
+alias reblsgen="sudo nixos-rebuild list-generations"
 
 export EDITOR=nvim
 function y() {

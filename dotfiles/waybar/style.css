@@ -17,10 +17,8 @@
 @define-color bright-cyan #83C092;
 @define-color bright-white #D3C6AA;
 
-
 /* Misc Colors */
 @define-color empty rgba(0, 0, 0, 0);
-
 
 /* Define for each module */
 @define-color bg @black;
@@ -38,8 +36,6 @@
 @define-color clock @bright-blue;
 @define-color tray @empty;
 
-
-
 * {
   font-family: "Iosevka Nerd Font Mono";
   font-size: 18px;
@@ -49,10 +45,10 @@ window#waybar {
   background-color: @bg;
   color: @fg;
   transition-property: background-color;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
-window#waybar>box {
+window#waybar > box {
   padding: 4px;
 }
 
@@ -92,7 +88,6 @@ button:hover {
   background-color: @bright-red;
 }
 
-
 #clock,
 #battery,
 #cpu,
@@ -114,7 +109,6 @@ button:hover {
   color: @fg;
   border-radius: 4px;
 }
-
 
 #mode {
   background-color: @mode;
@@ -180,7 +174,6 @@ button:hover {
   color: @bg;
 }
 
-
 #backlight {
   background-color: @backlight;
   color: @bg;
@@ -205,17 +198,16 @@ button:hover {
   color: @bg;
 }
 
-
 #tray {
   background-color: @tray;
   color: @bg;
 }
 
-#tray>.passive {
+#tray > .passive {
   -gtk-icon-effect: dim;
 }
 
-#tray>.needs-attention {
+#tray > .needs-attention {
   -gtk-icon-effect: highlight;
   background-color: @red;
 }
