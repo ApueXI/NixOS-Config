@@ -6,12 +6,13 @@
     neovim.enable = true;
     git.enable = true;
     nix-ld.enable = true;
+    lazygit.enable = true;
     # CLI
     yazi.enable = true;
     tmux.enable = true;
     # Wayland/Desktop
     sway.enable = true;
-    waybar.enable = true;
+    waybar.enable = false; # since sway is running this
     # Multimedia
     firefox.enable = true;
   };

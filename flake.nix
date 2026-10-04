@@ -11,15 +11,15 @@
     };
     home-manager-unstable = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
   outputs =
     {
       self,
-      nixpkgs-unstable,
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       home-manager-unstable,
       ...
@@ -44,6 +44,9 @@
 
             home-manager.nixosModules.home-manager
             {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
               home-manager.users.cred = import ./home.nix;
             }
           ];
@@ -64,6 +67,9 @@
 
             home-manager-unstable.nixosModules.home-manager
             {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
               home-manager.users.cred = import ./home.nix;
             }
           ];

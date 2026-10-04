@@ -3,6 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
 
+    # Power Management
+    tlp
+
     # Compile
     gcc
     gnumake
@@ -11,6 +14,7 @@
     neovim # enable
     git # enable
     tree-sitter
+    lazygit # enable
 
     # CLI
     yazi # enable
