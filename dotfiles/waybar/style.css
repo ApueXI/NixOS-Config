@@ -37,7 +37,7 @@
 @define-color tray @empty;
 
 * {
-  font-family: "Iosevka Nerd Font Mono";
+  font-family: "Iosevka Nerd Font Mono", "Iosevka Nerd Font";
   font-size: 18px;
 }
 

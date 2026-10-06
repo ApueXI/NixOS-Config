@@ -5,13 +5,6 @@
     # Power Management
     tlp
 
-    # Cli
-    btop
-    fastfetch
-    ncdu
-    yazi
-    tmux
-
     # Compile
     gcc
     gnumake
@@ -22,26 +15,33 @@
     tree-sitter
     lazygit # enable
 
+    # Cli
+    btop
+    fastfetch
+    ncdu
+    yazi # enable
+    tmux # enable
+
     # Zsh - enable
     zsh-autosuggestions
     zsh-autocomplete
     zsh-syntax-highlighting
     oh-my-zsh
 
-    # Multimedia
-    cava
-    mpv
-    firefox
-
     # Wayland / Desktop
-    sway
-    waybar
+    sway # enable
+    waybar # enable false
     nemo
     slurp
     grim
     rofi
     wl-clipboard
     kitty
+
+    # Multimedia
+    cava
+    mpv
+    firefox # enable
 
     # Clipboard
     cliphist
