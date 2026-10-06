@@ -41,6 +41,7 @@
             ./modules/packages.nix
             ./modules/programs.nix
             ./modules/services.nix
+            ./modules/fonts.nix
 
             home-manager.nixosModules.home-manager
             {
@@ -64,6 +65,7 @@
             ./modules/packages.nix
             ./modules/programs.nix
             ./modules/services.nix
+            ./modules/fonts.nix
 
             home-manager-unstable.nixosModules.home-manager
             {
