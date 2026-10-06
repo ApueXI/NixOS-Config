@@ -47,7 +47,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.cred = import ./home.nix;
+              home-manager.users.cred = import ./home/cred.nix;
             }
           ];
         };
@@ -70,7 +70,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.cred = import ./home.nix;
+              home-manager.users.cred = import ./home/cred.nix;
             }
           ];
         };
