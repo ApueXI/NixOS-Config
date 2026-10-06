@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, username, ... }:
 
 {
   zramSwap = {
@@ -20,4 +20,6 @@
     "nix-command"
     "flakes"
   ];
+
+  users.users.${username}.shell = pkgs.zsh;
 }

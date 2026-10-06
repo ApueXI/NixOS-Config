@@ -24,13 +24,23 @@
       home-manager-unstable,
       ...
     }:
+
+    # NOTE: EDIT HERE THE USERNAME
+    # NOTE: EDIT HERE THE USERNAME
+    # NOTE: EDIT HERE THE USERNAME
+    # NOTE: Do not edit the system unless you have specialized hardware
     let
       system = "x86_64-linux";
+      username = "cred";
     in
     {
       nixosConfigurations = {
         VM = nixpkgs.lib.nixosSystem {
           system = system;
+
+          specialArgs = {
+            inherit username;
+          };
 
           modules = [
             ./hosts/VM1/configuration.nix
@@ -45,16 +55,26 @@
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
 
-              home-manager.users.cred = import ./home/cred.nix;
+                extraSpecialArgs = {
+                  inherit username;
+                };
+
+                users.${username} = import ./home/cred.nix;
+              };
             }
           ];
         };
 
         VMUnstable = nixpkgs-unstable.lib.nixosSystem {
           system = system;
+
+          specialArgs = {
+            inherit username;
+          };
 
           modules = [
             ./hosts/VM1/configuration.nix
@@ -69,10 +89,16 @@
 
             home-manager-unstable.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
 
-              home-manager.users.cred = import ./home/cred.nix;
+                extraSpecialArgs = {
+                  inherit username;
+                };
+
+                users.${username} = import ./home/cred.nix;
+              };
             }
           ];
         };

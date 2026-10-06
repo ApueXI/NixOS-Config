@@ -1,10 +1,15 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
 
 {
   home = {
     stateVersion = "26.05";
-    username = "cred";
-    homeDirectory = "/home/cred";
+    username = "${username}";
+    homeDirectory = "/home/${username}";
 
     file = {
       ".config/btop".source = ../dotfiles/btop;
