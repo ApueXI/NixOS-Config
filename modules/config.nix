@@ -13,6 +13,10 @@
       device = "/home/swapfile";
       size = 4096;
       priority = 1;
+
+      # just so i can just uncomment if i want to increase swap file
+      # size = 8192;
+      # size = 16384;
     }
   ];
 

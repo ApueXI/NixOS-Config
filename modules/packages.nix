@@ -12,15 +12,16 @@
     # Development
     neovim # enable
     git # enable
-    tree-sitter
     lazygit # enable
+    tree-sitter
 
     # Cli
+    yazi # enable
+    tmux # enable
     btop
     fastfetch
     ncdu
-    yazi # enable
-    tmux # enable
+    cmatrix
 
     # Zsh - enable
     zsh-autosuggestions
@@ -39,9 +40,9 @@
     kitty
 
     # Multimedia
+    firefox # enable
     cava
     mpv
-    firefox # enable
 
     # Clipboard
     cliphist

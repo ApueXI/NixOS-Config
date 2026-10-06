@@ -32,6 +32,7 @@
     let
       system = "x86_64-linux";
       username = "cred";
+      hostsnames = "VM1";
     in
     {
       nixosConfigurations = {
@@ -40,10 +41,11 @@
 
           specialArgs = {
             inherit username;
+            inherit hostsnames;
           };
 
           modules = [
-            ./hosts/VM1/configuration.nix
+            ./hosts/${hostsnames}/configuration.nix
 
             ./modules/mason.nix
             ./modules/config.nix
@@ -74,10 +76,11 @@
 
           specialArgs = {
             inherit username;
+            inherit hostsnames;
           };
 
           modules = [
-            ./hosts/VM1/configuration.nix
+            ./hosts/${hostsnames}/configuration.nix
 
             ./modules/mason.nix
             ./modules/config.nix
